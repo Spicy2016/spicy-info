@@ -72,143 +72,172 @@ header {
 /* Main Section */
 section.home {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: flex-start;
     width: 100%;
     max-width: 1200px;
     margin: 100px auto 0 auto;
     padding: 2rem 1rem;
-    gap: 3rem;
+    gap: 1rem;
     box-sizing: border-box;
+    flex-wrap: wrap
 }
 
-/* Profile Image */
+.home h1 {
+    font-size: 2.4rem;
+    color: #ff4f58;
+    margin-bottom: 1.5rem;
+}
+.Profile {
+    display: flex;
+    border: #fff;
+    justify-content: center;
+    width: 1200px;
+    gap: 3rem;
+}
+
 .home-image {
+    position: relative;
     border-radius: 50%;
-    height: 180px;
-    width: 180px;
+    height: 250px;
+    width: 250px;
     object-fit: cover;
     margin-bottom: 1.5rem;
     box-shadow: 0 4px 16px rgba(0,0,0,0.4);
 }
-
-/* Home Content */
+.home-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
 .home-content {
     max-width: 700px;
-    text-align: center;
     margin-bottom: 2rem;
 }
 
 .home-content h1 {
+    text-align: center;
     font-size: 3rem;
     font-weight: 600;
     color: #ff4f58;
     margin-bottom: 1rem;
 }
 
-.home-content h3 {
-    font-size: 2rem;
-    color: #f4f4f4;
-    margin-bottom: 1rem;
-}
-
-.home-content p {
+.about p {
+    text-align: left;
     font-size: 1.5rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
     color: #f0f0f0;
+    position: relative;
 }
-
-.home-content a {
+.info-skills {
+    display: flex;
+    justify-content: flex-start;          
+    gap: 10px;              
+    width: 100%;
+    max-width: 1200px;              
+}
+.INFORMATION{
+    position: relative;
+    justify-content: space-between;
+    flex: 3;            
+    box-sizing: border-box;
+    text-align: left;
+}
+.info {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 49%;
+    background-color: #222222;
+    border-radius: 10px;
+}
+.info > div {
+    text-align: left;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #f0f0f0;
+    position: relative;
+}
+.con {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 49%;
+    background-color: #222222;
+    border-radius: 10px;
+    align-items: center;        /* horizontal centering */
+    justify-content: center;
+}
+.con > div {
+    text-align: left;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #f0f0f0;
+    position: relative;
+}
+.con a {
+    align-items: center;
+    justify-content: center;
     color: #ff4f58;
     margin: 0 1rem;
     font-size: 2.4rem;
     transition: color 0.3s;
 }
 
-.home-content a:hover {
+.con a:hover {
     color: #fff;
 }
+.social-media {
+   display: flex;               
+    justify-content: center;     
+    align-items: center;         
+    gap: 10px;                   
+    margin-top: 1rem;            
+}
 
-/* Achievements, Skills, Contact Sections */
-.ACHIEVEMENTS, .SKILLS, .CONTACT, .SCHEDULE{
+.INFORMATION h1{
+    text-align: center;
+}
+.SKILLS {
     background-color: #222222;
     padding: 2.5rem 2rem;
     border-radius: 10px;
+    flex: 10;                
+    box-sizing: border-box;
+    text-align: center;
     width: 100%;
-    max-width: 700px;
+}
+
+.set_skill{
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 2rem;
     margin: 0 auto;
+}
+.language {
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    flex: 2;                
     box-sizing: border-box;
     text-align: center;
 }
-.SCHEDULE table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-    text-align: center;
-    align-items: center;
-}
-.SCHEDULE th, .SCHEDULE td {
-    border: 1px solid #444;
-    padding: 0.8rem;
-    color: #ddd;
-}
-.SCHEDULE th {
-    background-color: #333;
-}
-.SCHEDULE p {
-    font-size: 1rem;
-    color: #ddd;
-}
-.ACHIEVEMENTS {
-    margin-top: 2rem;
-}
-
-.ACHIEVEMENTS h1, .SKILLS h1, .CONTACT h1, .SCHEDULE h1 {
-    font-size: 2.4rem;
-    color: #ff4f58;
-    margin-bottom: 1.5rem;
-}
-
-.ACHIEVEMENTS h3 {
-    font-size: 1.8rem;
-    color: #f0f0f0;
-    margin-bottom: 1rem;
-}
-
-.ACHIEVEMENTS p, .CONTACT p {
-    font-size: 1.5rem;
-    line-height: 1.6;
-    color: #ddd;
-    margin-bottom: 1rem;
-    text-align: left;
-
-}
-
-.ACHIEVEMENTS span, .CONTACT span {
-    font-weight: bold;
-    color: #ff4f58;
-}
-
-/* Skills Section */
-.SETS {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-}
-
-.SETS > div {
-    background-color: #222222;
+.text{
+    padding: 2.5rem 2rem;
     border-radius: 10px;
-    padding: 1.5rem 1rem;
-    width: 140px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 1rem;
+    flex: 8;                
+    box-sizing: border-box;
+    text-align: left;
+    width: 100%;
 }
 
 .SKILLS img {
@@ -228,174 +257,72 @@ section.home {
     margin-top: 0.5rem;
 }
 
-/* Contact Section */
-.CONTACT {
-    margin-top: 2rem;
-    text-align: left;
-}
-
-.CONTACT h1 {
+.SCHEDULE {
+    background-color: #222222;
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
     text-align: center;
 }
-.social-links {
+
+.SCHEDULE table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
     text-align: center;
     align-items: center;
 }
-.CONTACT a {
-    color: #fff;
-    margin: 0 3rem;
-    font-size: 2.4rem;
-    transition: color 0.3s;
+.SCHEDULE th, .SCHEDULE td {
+    border: 1px solid #444;
+    padding: 0.8rem;
+    color: #ddd;
 }
-
-.CONTACT a:hover {
-    color: #ff4f58;
-}
-
-
-
-
-/* Responsive Design */
-
-/* HAMBURGER (3 lines) */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-}
-
-.hamburger span {
-    width: 28px;
-    height: 3px;
+.SCHEDULE th {
     background-color: #333;
-    border-radius: 3px;
+}
+.SCHEDULE p {
+    font-size: 1rem;
+    color: #ddd;
 }
 
-/* DROPDOWN default hidden */
-.nav-dropdown {
-    display: none;
-    font-size: 1.4rem;
-    padding: 0.6rem 1rem;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    background: #fff;
+.HOBBIES {
+    background-color: #222222;
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    box-sizing: border-box;
+    text-align: center;
 }
-
-
-@media (max-width: 1024px) {
-    section.home {
-        max-width: 900px;
-        padding: 2rem 1rem;
-    }
-    .ACHIEVEMENTS, .SKILLS, .CONTACT, .SCHEDULE{
-        max-width: 600px;
-    }
-    .SETS {
-        gap: 1.5rem;
-    }
+.HOBBIES h1 {
+    font-size: 2.4rem;
+    color: #ff4f58;
+    margin-bottom: 1.5rem;
 }
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem 2rem;
-    }
-    .tabs {
-        display: none; }
-
-    /* show hamburger */
-    .hamburger {
-        display: flex;
-    }
-
-    /* show dropdown when hamburger is clicked */
-    .nav-dropdown.active {
-        display: block;
-        margin-top: 0.7rem;
-        width: 150px;
-        margin-left: auto;
-    }
-    section.home {
-        max-width: 100%;
-        padding: 1rem 0.5rem;
-        margin-top: 80px;
-    }
-    .ACHIEVEMENTS, .SKILLS, .CONTACT, .SCHEDULE{
-        max-width: 95vw;
-        padding: 2rem 1rem;
-    }
-    .SETS {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-    .home-image {
-        height: 140px;
-        width: 140px;
-    }
-    .home-content h1 {
-        font-size: 2.2rem;
-    }
-    .home-content h3 {
-        font-size: 1.6rem;
-    }
+.HOBBIES .hobbies {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
-
-@media (max-width: 480px) {
-    html {
-        font-size: 55%;
-    }
-    header {
-        padding: 0.5rem 1rem;
-    }
-    .justine {
-        font-size: 1.6rem;
-    }
-    .tabs a {
-        display: none; }
-
-    /* show hamburger */
-    .hamburger {
-        display: flex;
-    }
-
-    /* show dropdown when hamburger is clicked */
-    .nav-dropdown.active {
-        display: block;
-        margin-top: 0.7rem;
-        width: 150px;
-        margin-left: auto;
-    }
-    section.home {
-        margin-top: 70px;
-        padding: 0.5rem 0.2rem;
-        gap: 2rem;
-    }
-    .home-image {
-        height: 90px;
-        width: 90px;
-    }
-    .ACHIEVEMENTS, .SKILLS, .CONTACT, .SCHEDULE{
-        padding: 1rem 0.5rem;
-        font-size: 1.2rem;
-    }
-    .SETS > div {
-        width: 100px;
-        padding: 1rem 0.5rem;
-    }
-    .SKILLS img {
-        height: 50px;
-        width: 50px;
-    }
+.HOBBIES .hobby {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 200px;
+    text-align: center;
 }
-
-/* Hide large paddings from old CSS */
-body {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+.HOBBIES .hobby img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+.HOBBIES .hobby h3 {
+    color: #ff4f58;
+    font-size: 1.5rem;
 }
