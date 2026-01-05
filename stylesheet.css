@@ -69,55 +69,51 @@ header {
     background: #222;
 }
 
-/* Main Section */
+/* MAIN LAYOUT (Table Fixes) */
 section.home {
-    display: flex;
-    justify-content: flex-start;
     width: 100%;
     max-width: 1200px;
     margin: 100px auto 0 auto;
     padding: 2rem 1rem;
-    gap: 1rem;
-    box-sizing: border-box;
-    flex-wrap: wrap
 }
 
-.home h1 {
-    font-size: 2.4rem;
-    color: #ff4f58;
-    margin-bottom: 1.5rem;
-}
-.Profile {
-    display: flex;
-    border: #fff;
-    justify-content: center;
-    width: 1200px;
-    gap: 3rem;
+
+table.home-table {
+    width: 100%;
+    border-collapse: separate; /* Allows us to use border-spacing */
+    border-spacing: 2rem; /* Space between cells */
+    border: none; /* Remove default table border */
 }
 
-.home-image {
-    position: relative;
+table.home-table td {
+    padding: 0;
+    border: none; /* Remove default cell borders */
+}
+
+/* PROFILE SECTION */
+.home-image-container {
     border-radius: 50%;
     height: 250px;
     width: 250px;
-    object-fit: cover;
-    margin-bottom: 1.5rem;
+    overflow: hidden;
+    margin: 0 auto;
     box-shadow: 0 4px 16px rgba(0,0,0,0.4);
 }
+
+.home-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .home-text {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    
-}
-.home-content {
-    max-width: 700px;
-    margin-bottom: 2rem;
 }
 
 .home-content h1 {
-    text-align: center;
     font-size: 3rem;
     font-weight: 600;
     color: #ff4f58;
@@ -128,201 +124,261 @@ section.home {
     text-align: left;
     font-size: 1.5rem;
     line-height: 1.8;
-    margin-bottom: 1.5rem;
     color: #f0f0f0;
-    position: relative;
 }
-.info-skills {
-    display: flex;
-    justify-content: flex-start;          
-    gap: 10px;              
-    width: 100%;
-    max-width: 1200px;              
-}
-.INFORMATION{
-    position: relative;
-    justify-content: space-between;
-    flex: 3;            
-    box-sizing: border-box;
-    text-align: left;
-}
-.info {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 49%;
+
+/* CARD STYLES */
+.card-style {
     background-color: #222222;
+    padding: 2.5rem 2rem;
     border-radius: 10px;
-}
-.info > div {
-    text-align: left;
-    font-size: 1.5rem;
-    line-height: 1.8;
-    margin-left: 1.5rem;
-    margin-bottom: 1.5rem;
-    color: #f0f0f0;
-    position: relative;
-}
-.con {
-    position: absolute;
-    bottom: 0;
+    height: 100%; 
     width: 100%;
-    height: 49%;
-    background-color: #222222;
-    border-radius: 10px;
-    align-items: center;        /* horizontal centering */
-    justify-content: center;
 }
-.con > div {
-    text-align: left;
-    font-size: 1.5rem;
-    line-height: 1.8;
-    margin-left: 1.5rem;
-    margin-bottom: 1.5rem;
-    color: #f0f0f0;
-    position: relative;
-}
-.con a {
-    align-items: center;
-    justify-content: center;
+
+.card-style h1 {
+    text-align: center;
+    font-size: 2.4rem;
     color: #ff4f58;
-    margin: 0 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Info & Contact Specifics */
+.info, .con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info > div, .con > div {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #f0f0f0;
+}
+
+.social-media {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 1rem;
+}
+
+.social-media a {
+    color: #ff4f58;
     font-size: 2.4rem;
     transition: color 0.3s;
 }
 
-.con a:hover {
+.social-media a:hover {
     color: #fff;
 }
-.social-media {
-   display: flex;               
-    justify-content: center;     
-    align-items: center;         
-    gap: 10px;                   
-    margin-top: 1rem;            
-}
 
-.INFORMATION h1{
-    text-align: center;
-}
-.SKILLS {
-    background-color: #222222;
-    padding: 2.5rem 2rem;
-    border-radius: 10px;
-    flex: 10;                
-    box-sizing: border-box;
-    text-align: center;
-    width: 100%;
-}
-
-.set_skill{
+/* SKILLS SECTION */
+.SETS {
     display: flex;
-    justify-content: flex-start;
-    gap: 1rem;
-    width: 100%;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-    margin: 0 auto;
-}
-.language {
-    padding: 2.5rem 2rem;
-    border-radius: 10px;
-    flex: 2;                
-    box-sizing: border-box;
-    text-align: center;
-}
-.text{
-    padding: 2.5rem 2rem;
-    border-radius: 10px;
-    flex: 8;                
-    box-sizing: border-box;
-    text-align: left;
-    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-.SKILLS img {
+.set_skill {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.language {
+    flex: 0 0 100px;
+    text-align: center;
+}
+
+.language img {
     height: 80px;
     width: 80px;
-    margin-bottom: 1rem;
     transition: transform 0.3s;
 }
 
-.SKILLS img:hover {
+.language img:hover {
     transform: scale(1.1);
 }
 
-.SETS p {
-    color: white;
+.text {
+    flex: 1;
+}
+
+.text p {
     font-size: 1.2rem;
-    margin-top: 0.5rem;
+    color: #ddd;
+    line-height: 1.4;
 }
 
-.SCHEDULE {
-    background-color: #222222;
-    padding: 2.5rem 2rem;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-.SCHEDULE table {
+/* SCHEDULE (Inner Table) */
+.schedule-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1rem;
     text-align: center;
-    align-items: center;
 }
-.SCHEDULE th, .SCHEDULE td {
+
+.schedule-table th, .schedule-table td {
     border: 1px solid #444;
     padding: 0.8rem;
     color: #ddd;
-}
-.SCHEDULE th {
-    background-color: #333;
-}
-.SCHEDULE p {
-    font-size: 1rem;
-    color: #ddd;
+    background-color: transparent;
 }
 
-.HOBBIES {
-    background-color: #222222;
-    padding: 2.5rem 2rem;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto 2rem auto;
-    box-sizing: border-box;
-    text-align: center;
+.schedule-table th {
+    background-color: #333;
 }
-.HOBBIES h1 {
-    font-size: 2.4rem;
+
+.schedule-table h4 {
     color: #ff4f58;
-    margin-bottom: 1.5rem;
+    margin-bottom: 5px;
 }
-.HOBBIES .hobbies {
+
+.schedule-table p {
+    font-size: 1.2rem;
+    color: #bbb;
+}
+
+/* HOBBIES SECTION */
+.hobbies {
     display: flex;
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
 }
-.HOBBIES .hobby {
+
+.hobby {
     background-color: #333;
     border-radius: 10px;
     padding: 1rem;
     width: 200px;
     text-align: center;
 }
-.HOBBIES .hobby img {
+
+.hobby img {
     width: 100%;
     height: 150px;
     border-radius: 10px;
+    object-fit: cover;
     margin-bottom: 1rem;
 }
-.HOBBIES .hobby h3 {
+
+.hobby h3 {
     color: #ff4f58;
     font-size: 1.5rem;
 }
+
+
+
+
+
+/* CONTACT SECTION */
+.contact {
+    margin-top: 10rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;   /* horizontal */
+    align-items: center;    
+    flex-direction: column;
+}
+table.contact-table { 
+    width: auto; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    border-collapse: separate; 
+    border-spacing: 2rem; 
+    border: none; /* Remove default table border */
+}
+
+table.contact-table td {
+    padding: 0;
+    border: none; /* Remove default cell borders */
+}
+
+.contact-image-container {
+    border-radius: 10px;
+    height: 410px;
+    width: 250px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.contact-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start; 
+}
+.contact-form input, .contact-form textarea {
+    width: 500px;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.4rem;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 1rem;
+}
+
+.contact-form h5 {
+    text-align: center;
+}
+.contact-form button {
+    text-align: center;
+    margin-top: 1rem;
+    width: 150px;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff4f58;
+    color: #fff;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.contact-form button:hover {
+        max-height: 410px;
+}
+
+/* GALLERY SECTION */
+.GALLERY {
+    margin-top: 10rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.GALLERY-table {
+    width: 100%;
+    max-width: 1200px;
+    border-collapse: separate;
+    border-spacing: 2rem; 
+    table-layout: fixed;
+}
+
+.GALLERY-table td {
+    padding: 0;
+    overflow: hidden;
+    background-color: #e4d4d4;
+}
+
+.GALLERY-table img {
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+margin: 1rem;
+}
+
+
